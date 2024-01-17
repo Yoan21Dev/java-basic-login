@@ -1,15 +1,18 @@
-package com.irojas.demojwt.Auth;
+package com.yarm.demojwt.Auth.service;
 
+import com.yarm.demojwt.Auth.response.AuthResponse;
+import com.yarm.demojwt.Auth.request.LoginRequest;
+import com.yarm.demojwt.Auth.request.RegisterRequest;
+import com.yarm.demojwt.User.Role;
+import com.yarm.demojwt.User.User;
+import com.yarm.demojwt.User.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.irojas.demojwt.Jwt.JwtService;
-import com.irojas.demojwt.User.Role;
-import com.irojas.demojwt.User.User;
-import com.irojas.demojwt.User.UserRepository;
+import com.yarm.demojwt.Jwt.JwtService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -37,7 +40,7 @@ public class AuthService {
             .username(request.getUsername())
             .password(passwordEncoder.encode( request.getPassword()))
             .firstname(request.getFirstname())
-            .lastname(request.lastname)
+            .lastname(request.getLastname())
             .country(request.getCountry())
             .role(Role.USER)
             .build();

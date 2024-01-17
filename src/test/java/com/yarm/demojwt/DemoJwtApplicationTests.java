@@ -1,4 +1,4 @@
-package com.irojas.demojwt;
+package com.yarm.demojwt;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
