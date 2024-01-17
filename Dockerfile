@@ -1,12 +1,22 @@
-FROM openjdk:11-jre-slim
-LABEL authors="YARM"
-# Copia el archivo JAR de la aplicación al contenedor
-COPY target/demo-jwt-0.0.1-SNAPSHOT.jar /app/app.jar
-# Establece el directorio de trabajo
+# Etapa de construcción
+FROM maven:3.8.4-openjdk-17-slim AS build
+
 WORKDIR /app
-# Expone el puerto en el que se ejecuta la aplicación Spring Boot
+
+COPY . .
+
+# Empaqueta la aplicación con Maven
+RUN mvn clean install
+
+# Etapa de ejecución
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+
 EXPOSE 8080
 
-#ENTRYPOINT ["top", "-b"]
+# Copia el JAR construido desde la etapa de construcción
+COPY --from=build /app/target/tu-aplicacion.jar app.jar
+
 # Comando para ejecutar la aplicación al iniciar el contenedor
-CMD ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
