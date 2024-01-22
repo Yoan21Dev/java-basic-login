@@ -17,7 +17,7 @@ WORKDIR /app
 EXPOSE 8080
 
 # Copia el JAR construido desde la etapa de construcción
-COPY --from=build /app/target/tu-aplicacion.jar app.jar
+COPY --from=build /app/target/demo-jwt-0.0.1-SNAPSHOT.jar app.jar
 
 # Comando para ejecutar la aplicación al iniciar el contenedor
 ENTRYPOINT ["java", "-jar", "app.jar"]
