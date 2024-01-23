@@ -1,4 +1,4 @@
-package com.yarm.demojwt.Auth.response;
+package com.yarm.demojwt.module.Auth.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class AuthResponse {
-    String token; 
+@NoArgsConstructor
+public class LoginRequest {
+    String username;
+    String password; 
 }

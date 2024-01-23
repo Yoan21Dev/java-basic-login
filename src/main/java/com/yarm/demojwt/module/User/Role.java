@@ -1,4 +1,4 @@
-package com.yarm.demojwt.User;
+package com.yarm.demojwt.module.User;
 
 public enum Role {
     ADMIN,

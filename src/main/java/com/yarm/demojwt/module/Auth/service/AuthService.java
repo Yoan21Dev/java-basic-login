@@ -1,11 +1,11 @@
-package com.yarm.demojwt.Auth.service;
+package com.yarm.demojwt.module.Auth.service;
 
-import com.yarm.demojwt.Auth.response.AuthResponse;
-import com.yarm.demojwt.Auth.request.LoginRequest;
-import com.yarm.demojwt.Auth.request.RegisterRequest;
-import com.yarm.demojwt.User.Role;
-import com.yarm.demojwt.User.User;
-import com.yarm.demojwt.User.UserRepository;
+import com.yarm.demojwt.module.Auth.response.AuthResponse;
+import com.yarm.demojwt.module.Auth.request.LoginRequest;
+import com.yarm.demojwt.module.Auth.request.RegisterRequest;
+import com.yarm.demojwt.module.User.Role;
+import com.yarm.demojwt.module.User.User;
+import com.yarm.demojwt.module.User.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;

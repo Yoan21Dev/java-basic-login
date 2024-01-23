@@ -1,4 +1,4 @@
-package com.yarm.demojwt.Auth.request;
+package com.yarm.demojwt.module.Auth.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

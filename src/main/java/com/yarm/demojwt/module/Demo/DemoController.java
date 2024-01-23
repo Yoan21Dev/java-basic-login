@@ -1,4 +1,4 @@
-package com.yarm.demojwt.Demo;
+package com.yarm.demojwt.module.Demo;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

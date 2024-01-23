@@ -1,9 +1,9 @@
-package com.yarm.demojwt.Auth.controller;
+package com.yarm.demojwt.module.Auth.controller;
 
-import com.yarm.demojwt.Auth.response.AuthResponse;
-import com.yarm.demojwt.Auth.service.AuthService;
-import com.yarm.demojwt.Auth.request.LoginRequest;
-import com.yarm.demojwt.Auth.request.RegisterRequest;
+import com.yarm.demojwt.module.Auth.response.AuthResponse;
+import com.yarm.demojwt.module.Auth.service.AuthService;
+import com.yarm.demojwt.module.Auth.request.LoginRequest;
+import com.yarm.demojwt.module.Auth.request.RegisterRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

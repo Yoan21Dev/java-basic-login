@@ -1,4 +1,4 @@
-package com.yarm.demojwt.User;
+package com.yarm.demojwt.module.User;
 
 import java.util.Collection;
 import java.util.List;

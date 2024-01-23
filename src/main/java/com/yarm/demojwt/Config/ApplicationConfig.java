@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.yarm.demojwt.User.UserRepository;
+import com.yarm.demojwt.module.User.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -44,7 +44,7 @@ public class ApplicationConfig {
     @Bean
     public UserDetailsService userDetailService() {
         return username -> userRepository.findByUsername(username)
-        .orElseThrow(()-> new UsernameNotFoundException("User not fournd"));
+        .orElseThrow(()-> new UsernameNotFoundException("User not found"));
     }
 
 }
